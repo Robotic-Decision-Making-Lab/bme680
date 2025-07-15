@@ -1,7 +1,6 @@
 # BME680 Pressure Sensor
 
-bme680 is a ROS 2 interface for the BME 680 pressure sensor.
-
+bme680 is a ROS 2 interface for the BME680 pressure sensor.
 
 ## Installation
 
@@ -26,9 +25,9 @@ colcon build && source install/setup.bash
 
 ## Usage
 
-The BME 680 ROS 2 driver can be launched with
+The BME680 ROS 2 driver can be launched with
 
-```
+```bash
 ros2 launch bme680_driver bme680.launch.yaml
 ```
 

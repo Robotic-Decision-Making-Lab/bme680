@@ -4,7 +4,7 @@
 
   <name>bme680_driver</name>
   <version>0.0.1</version>
-  <description>ROS 2 interface for the BME 680 located in the autonomy bottle</description>
+  <description>ROS 2 interface for the BME680</description>
 
   <maintainer email="evanp922@gmail.com">Evan Palmer</maintainer>
   <license>MIT</license>

@@ -48,7 +48,7 @@ setup(
     zip_safe=True,
     maintainer="Evan Palmer",
     maintainer_email="evanp922@gmail.com",
-    description="ROS 2 driver for the BME 680 sensor",
+    description="ROS 2 driver for the BME680 sensor",
     license="MIT",
     tests_require=["pytest"],
     entry_points={
