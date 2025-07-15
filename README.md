@@ -1,38 +1,42 @@
-# ROS 2 Project Template
+# BME680 Pressure Sensor
 
-Setting up a new ROS 2 project often requires a significant amount of
-preparation and boilerplate configuration, costing you valuable robot
-development time 🤖. Recognizing this, we have put together this template
-repository configured with a ROS 2 development environment, continuous
-integration, and more. This project is the result of much trial and error
-across many projects, and we hope that this helps you save some effort in
-setting up your own projects.
+bme680 is a ROS 2 interface for the BME 680 pressure sensor.
 
-## Features
 
-The main features of this template are:
+## Installation
 
-- A development environment for Visual Studio Code including a [development container](https://code.visualstudio.com/docs/devcontainers/containers)
-and configurations for linting and auto-formatting your code
-- Docker images that support deployment to a variety of systems (e.g., arm64
-systems)
-- Continuous integration and deployment pipelines using GitHub Actions
-- GitHub Issue and Pull Request templates
+To install the project, first clone the repository to the `src/` directory of
+your ROS 2 workspace
 
-## Quick start
+```bash
+git clone git@github.com:Robotic-Decision-Making-Lab/bme680.git
+```
 
-Using this template is as easy as 1, 2, 3...
+Then install the project dependencies using rosdep
 
-1. Use this repository [as a template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)
-for your project
-2. Replace all instances of "ros2-template" with your own project's name
-3. Replace the source code with your own project!
+```bash
+rosdep install --from paths src -y --ignore-src
+```
 
-Feel free to remove any unused configurations/pipelines and to adjust things as
-you see fit for your project!
+Finally, build the workspace using colcon
+
+```bash
+colcon build && source install/setup.bash
+```
+
+## Usage
+
+The BME 680 ROS 2 driver can be launched with
+
+```
+ros2 launch bme680_driver bme680.launch.yaml
+```
 
 ## Getting help
 
-If you have questions regarding usage of this project or would like to
-contribute, please ask a question on our [Discussions](https://github.com/Robotic-Decision-Making-Lab/ros2-template/discussions)
-board!
+If you have questions regarding usage of bme680 or regarding contributing
+to this project, please submit an issue to our [Issue Tracker](https://github.com/Robotic-Decision-Making-Lab/bme680/issues).
+
+## License
+
+bme680 is released under the MIT license.

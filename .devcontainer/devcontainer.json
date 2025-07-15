@@ -1,9 +1,9 @@
 {
   "name": "ROS 2 Dev Container",
   "dockerFile": "Dockerfile",
-  "context": "../..",
-  "workspaceMount": "source=${localWorkspaceFolder},target=/home/ubuntu/ws_ros/src/ros2-template,type=bind",
-  "workspaceFolder": "/home/ubuntu/ws_ros/src/ros2-template",
+  "context": "..",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/home/ubuntu/ws_ros/src/bme680,type=bind",
+  "workspaceFolder": "/home/ubuntu/ws_ros/src/bme680",
   "remoteUser": "ubuntu",
   "runArgs": [
     "--network=host",
@@ -11,15 +11,8 @@
     "--security-opt=seccomp:unconfined",
     "--security-opt=apparmor:unconfined",
     "--volume=/dev:/dev",
-    "--privileged",
-    "--volume=/run/user/1000:/run/user/1000"
+    "--privileged"
   ],
-  "containerEnv": {
-    "DISPLAY": "${localEnv:DISPLAY}",
-    "WAYLAND_DISPLAY": "${localEnv:WAYLAND_DISPLAY}",
-    "XDG_RUNTIME_DIR": "${localEnv:XDG_RUNTIME_DIR}",
-    "PULSE_SERVER": "${localEnv:PULSE_SERVER}"
-  },
   "customizations": {
     "vscode": {
       "extensions": [
@@ -29,7 +22,6 @@
         "ms-vscode.cpptools",
         "redhat.vscode-xml",
         "redhat.vscode-yaml",
-        "smilerobotics.urdf",
         "DavidAnson.vscode-markdownlint",
         "esbenp.prettier-vscode",
         "xaver.clang-format",

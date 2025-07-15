@@ -1,0 +1,18 @@
+bme680_driver:
+  i2c_bus:
+    type: int
+    default_value: 1
+    description: The I2C bus number.
+    read_only: True
+
+  i2c_address:
+    type: int
+    default_value: 0x77
+    description: The I2C address of the BME680 sensor.
+    read_only: True
+
+  update_rate:
+    type: int
+    default_value: 1
+    description: The update rate of the sensor in Hz.
+    read_only: True

@@ -1,0 +1,11 @@
+launch:
+
+  - arg:
+      name: params_file
+      default: $(find-pkg-share bme680_driver)/config/bme680.yaml
+
+  - node:
+      pkg: bme680_driver
+      exec: bme680_driver
+      param:
+        - from: $(var params_file)
