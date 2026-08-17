@@ -50,7 +50,6 @@ setup(
     maintainer_email="evanp922@gmail.com",
     description="ROS 2 driver for the BME680 sensor",
     license="MIT",
-    tests_require=["pytest"],
     entry_points={
         "console_scripts": ["bme680_driver = bme680_driver.driver:main"],
     },
